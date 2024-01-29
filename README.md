@@ -3,17 +3,22 @@
 #include <algorithm> 
 #include <string>
 using namespace std;
+
 class Book {
 public:
 Book(string title, string author, string isbn):title(title), author(author), isbn(isbn) {}
+
     string getTitle() const { return title; }
     string getAuthor() const { return author; }
     string getISBN() const { return isbn; }
+
 private:
     string title;
     string author;
     string isbn;
 };
+
+
 class Library {
 public:
   
@@ -32,7 +37,8 @@ public:
         } else {
             cout << "Book with ISBN " << isbn << " not found in the library.\n";
         }
-    }    
+    }
+    
  
     void displayBooks() const {
         if (books.empty()) {
@@ -65,5 +71,4 @@ int main() {
 
     return 0;
 }
-
 
